@@ -1,0 +1,49 @@
+@import url('./badge.css');
+@import url('./background.css');
+@import url('./buttons.css');
+@import url('./card.css');
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    background-color: rgba(246, 246, 246, 0.6);
+    font-size: 14px;
+    overflow-x: hidden;
+    font-family: Nunito;
+    color: #242934
+}
+
+ul {
+    padding-left: 0px;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-right: 0px
+}
+
+* a {
+    color: #F95A61
+}
+
+*.btn:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: .7px
+}
+
+
+input:focus {
+    outline-color: rgba(0, 0, 0, 0)
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: #F95A61
+}
