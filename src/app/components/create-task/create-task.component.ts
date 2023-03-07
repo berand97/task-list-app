@@ -21,17 +21,16 @@ export class CreateTaskComponent {
   });
 
   newTask: FormControl = this.fb.control('', Validators.required);
-  complete: FormControl = this.fb.control(false, Validators.required);
-
-  get taskArray() {
-    return this.taskForm.get('tasks') as FormArray;
-  }
 
   constructor(
     private fb: FormBuilder,
     private taskService: TaskService,
     private router: Router
   ) { }
+
+  get taskArray() {
+    return this.taskForm.get('tasks') as FormArray;
+  }
 
   isValid(campo: string) {
     return this.taskForm.controls[campo].errors
@@ -50,7 +49,7 @@ export class CreateTaskComponent {
     this.nextId++;
   }
 
-  borrar(i: number) {
+  deteledTask(i: number) {
     this.taskArray.removeAt(i);
   }
 
@@ -71,8 +70,6 @@ export class CreateTaskComponent {
         })
         this.router.navigateByUrl('');
       })
-
   }
 
 }
-

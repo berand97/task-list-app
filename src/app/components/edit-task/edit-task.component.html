@@ -3,11 +3,10 @@
         <div class="col-sm-12">
             <div class="card h-100">
                 <div class="card-header">
-                    <h6 class="text-center">¡Hora de ponernos en acción! ¿Tienes una tarea pendiente que necesitas
-                        crear? </h6>
+                    <h6 class="text-center">Edita tus tareas</h6>
                 </div>
                 <div class="card-body">
-                    <form autocomplete="off" [formGroup]="taskForm" (ngSubmit)="saveTask()">
+                    <form autocomplete="off" [formGroup]="taskForm" (ngSubmit)="updateTask()">
                         <div class="col-md-12 col-lg-12 col-sm-12 w-100">
                             <label class="col-sm-3 col-form-label">Nombre de la tarea</label>
                             <div class="col-sm-12">
@@ -53,7 +52,8 @@
                             <label class="col-sm-3 col-form-label">Tareas</label>
                             <div class="col-sm-12" formArrayName="tasks">
                                 <div class="input-group mb-1" *ngFor="let task of taskArray.controls; let i = index">
-                                    <input class="form-control" [value]="task.value.task">
+                                    <input class="form-control" [value]="task.value.task"
+                                        (change)="updateTaskValue(task, $event)">
                                     <button class="btn btn-outline-danger" type="button" (click)="deteledTask(i)">
                                         Eliminar
                                     </button>

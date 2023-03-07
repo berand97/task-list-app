@@ -35,4 +35,8 @@ export class TaskService {
     return this.http.put(url, body);
   }
 
+  taskDetail(taskId: number): Observable<Task> {
+    return this.http.get<Task>(`${this.url}/tasks/${taskId}`);
+  }
+
 }
