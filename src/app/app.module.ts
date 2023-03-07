@@ -11,13 +11,15 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { TasksListComponent } from './components/tasks-list/tasks-list.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskItemComponent,
     CreateTaskComponent,
-    TasksListComponent
+    TasksListComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,

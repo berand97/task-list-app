@@ -1,16 +1,16 @@
 .btn-primary {
-    background-color: #F95A61 !important;
-    border-color: #F95A61 !important
+    background-color: #818cf8 !important;
+    border-color: #818cf8 !important
 }
 
 .btn-primary.disabled {
-    background-color: #F95A61 !important;
-    border-color: #F95A61 !important
+    background-color: #818cf8 !important;
+    border-color: #818cf8 !important
 }
 
 .btn-primary:disabled {
-    background-color: #F95A61 !important;
-    border-color: #F95A61 !important
+    background-color: #818cf8 !important;
+    border-color: #818cf8 !important
 }
 
 .btn-primary:hover,
@@ -83,18 +83,18 @@
 }
 
 .btn-danger {
-    background-color: #fd517d !important;
-    border-color: #fd517d !important
+    background-color: #e11d48 !important;
+    border-color: #e11d48 !important
 }
 
 .btn-danger.disabled {
-    background-color: #fd517d !important;
-    border-color: #fd517d !important
+    background-color: #e11d48 !important;
+    border-color: #e11d48 !important
 }
 
 .btn-danger:disabled {
-    background-color: #fd517d !important;
-    border-color: #fd517d !important
+    background-color: #e11d48 !important;
+    border-color: #e11d48 !important
 }
 
 .btn-danger:hover,
@@ -224,8 +224,8 @@
 
 .btn-outline-primary-2x {
     border-width: 2px;
-    border-color: #F95A61;
-    color: #F95A61;
+    border-color: #818cf8;
+    color: #818cf8;
     background-color: transparent
 }
 
@@ -278,8 +278,8 @@
 
 .btn-outline-danger-2x {
     border-width: 2px;
-    border-color: #fd517d;
-    color: #fd517d;
+    border-color: #e11d48;
+    color: #e11d48;
     background-color: transparent
 }
 
@@ -367,13 +367,13 @@
 }
 
 .btn-outline-primary {
-    border-color: #F95A61;
-    color: #F95A61;
+    border-color: #818cf8;
+    color: #818cf8;
     background-color: transparent
 }
 
 .btn-outline-primary.disabled {
-    color: #F95A61
+    color: #818cf8
 }
 
 .btn-outline-primary:hover,
@@ -424,13 +424,13 @@
 }
 
 .btn-outline-danger {
-    border-color: #fd517d;
-    color: #fd517d;
+    border-color: #e11d48;
+    color: #e11d48;
     background-color: transparent
 }
 
 .btn-outline-danger.disabled {
-    color: #fd517d
+    color: #e11d48
 }
 
 .btn-outline-danger:hover,

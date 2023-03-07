@@ -15,15 +15,24 @@ export class TaskItemComponent implements OnInit {
   searchTerm = '';
 
   constructor(
-    private taskService: TaskService,
-    private router: Router) { }
-
-
+    private taskService: TaskService
+    ) { }
+    
   ngOnInit(): void {
+    this.getAllTasks();
+  }
+
+  getAllTasks(): void {
     this.taskService.getAllTasks()
       .subscribe((resp: Task[]) => {
         this.tasks = resp;
       })
+  }
+
+  updateTask(task: Task) {
+    this.taskService.updateTask(task.id, task)
+      .subscribe(() => {
+      });
   }
 
   deleteTask(task: Task) {
@@ -36,7 +45,7 @@ export class TaskItemComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500
         })
-        this.router.navigateByUrl('');
+        this.getAllTasks();
       })
   }
 
@@ -48,12 +57,6 @@ export class TaskItemComponent implements OnInit {
 
   areAllTasksCompleted(task: Task): boolean {
     return task.tasks.every(taskDetail => taskDetail.complete);
-  }
-
-  updateTask(task: Task) {
-    this.taskService.updateTask(task.id, task)
-      .subscribe(() => {
-      });
   }
 
   filterTasks(): Task[] {
