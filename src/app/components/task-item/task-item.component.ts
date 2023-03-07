@@ -67,10 +67,11 @@ export class TaskItemComponent implements OnInit {
     const searchTermLowerCase = this.searchTerm.toLowerCase();
 
     return this.tasks.filter(task => {
-      const nameMatches = task.category.toLowerCase().includes(searchTermLowerCase);
+      const nameMatches = task.name.toLowerCase().includes(searchTermLowerCase);
       const descriptionMatches = task.description.toLowerCase().includes(searchTermLowerCase);
+      const categoryMatches = task.category.toLowerCase().includes(searchTermLowerCase);
       const taskDetailMatches = task.tasks.some(taskDetail => taskDetail.task.toLowerCase().includes(searchTermLowerCase));
-      return nameMatches || descriptionMatches || taskDetailMatches;
+      return nameMatches || descriptionMatches || taskDetailMatches || categoryMatches;
     });
   }
 
