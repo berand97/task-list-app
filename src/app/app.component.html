@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand"routerLink="">
       <img src="assets/img/clipboard.png" width="30" height="30" class="d-inline-block align-top" alt="">
       Tasks List App
     </a>
@@ -11,57 +11,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" routerLink="crear-tarea">Crear Tarea</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
-
-<div class="container mt-4">
-  <h1 class="text-center">¡Bienvenido a la aplicación más fácil para crear listas de tareas!</h1>
-  <div class="row  mt-4">
-    <div class="col-sm-12 col-md-12 col-lg-4">
-      <div class="card h-100 border-0 shadow">
-        <div class="card-body">
-          <h5 class="card-title">Tasks 1</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolore consectetur,
-            suscipit aperiam beatae accusamus architecto eveniet ducimus, non cupiditate similique nesciunt quae
-            adipisci quam atque! Itaque labore modi expedita.</p>
-          <div class="mb-1">
-            <span class="badge badge-primary">Primary</span>
-          </div>
-          <div class="progress">
-            <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 10%"
-              aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-4">
-      <div class="card h-100 border-0 shadow">
-        <div class="card-body">
-          <h5 class="card-title">Tasks 2</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolore consectetur,
-            suscipit aperiam beatae accusamus architecto eveniet ducimus, non cupiditate similique nesciunt quae
-            adipisci quam atque! Itaque labore modi expedita.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-12 col-lg-4">
-      <div class="card h-100 border-0 shadow">
-        <div class="card-body">
-          <h5 class="card-title">Task 3</h5>
-          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, quasi. Dolorum veritatis
-            voluptate exercitationem, magni reiciendis, modi beatae, corrupti quisquam illo tempora iure commodi
-            necessitatibus nulla? Maiores, vel. Itaque, repellendus.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>

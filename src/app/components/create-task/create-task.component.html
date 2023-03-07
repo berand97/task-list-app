@@ -1,0 +1,79 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h6 class="text-center">¡Hora de ponernos en acción! ¿Tienes una tarea pendiente que necesitas
+                        completar? ¡Es momento de
+                        hacerlo! Tómate un momento para pensar en qué es lo que necesitas hacer y crea una lista de
+                        tareas
+                        para asegurarte de que no se te escape nada.</h6>
+                </div>
+                <div class="card-body">
+                    <form autocomplete="off" [formGroup]="taskForm" (ngSubmit)="saveTask()">
+                        <div class="col-md-12 col-lg-12 col-sm-12 w-100">
+                            <label class="col-sm-3 col-form-label">Nombre de la tarea</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" formControlName="name" placeholder="Nombre de la tarea">
+                                <span class="form-text text-danger" *ngIf="isValid('name')">
+                                    Este campo es obligatorio
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <label class="col-sm-3 col-form-label">Descripción</label>
+                            <div class="col-sm-12">
+                                <textarea name="" id="" cols="30" rows="3" class="form-control"
+                                    formControlName="description"></textarea>
+                                <span class="form-text text-danger" *ngIf="isValid('description')">
+                                    Este campo es obligatorio
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <label class="col-sm-3 col-form-label">Categoria</label>
+                            <div class="col-sm-12">
+                                <input class="form-control" formControlName="category" placeholder="Nombre de la tarea">
+                                <span class="form-text text-danger" *ngIf="isValid('category')">
+                                    Este campo es obligatorio
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <label class="col-sm-3 col-form-label">Agregar</label>
+                            <div class="col-sm-12">
+
+                                <div class="input-group">
+                                    <input class="form-control" [formControl]="newTask" placeholder="Escribe una tarea"
+                                        (keyup.enter)="addTask()">
+                                    <button class="btn btn-outline-primary" type="button" (click)="addTask()">
+                                        Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <label class="col-sm-3 col-form-label">Tareas</label>
+                            <div class="col-sm-12" formArrayName="tasks">
+                                <div class="input-group mb-1" *ngFor="let task of taskArray.controls; let i = index">
+                                    <input class="form-control" [value]="task.value.task">
+                                    <button class="btn btn-outline-danger" type="button" (click)="borrar(i)">
+                                        Eliminar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" class="btn btn-primary float-end" type="submit">
+                                    Guardar Tarea
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
